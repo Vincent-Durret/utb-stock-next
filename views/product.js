@@ -1,12 +1,12 @@
 import Grid from '@/components/Grid/Grid';
-import SectionAddSubProduct from '@/components/ProductSection/SectionAddSubProduct';
 import SubProducts from '@/components/SubProducts/SubProducts';
+import SectionAddSubProducts from '@/components/SubProductsSection/SectionAddSubProducts';
 import React from 'react';
 
 const Product = (props) => {
   return (
     <section>
-      <SectionAddSubProduct />
+      <SectionAddSubProducts subProducts={props.subProducts} productId={props.productId} />
       <Grid>
         <SubProducts subProducts={props.subProducts} />
       </Grid>

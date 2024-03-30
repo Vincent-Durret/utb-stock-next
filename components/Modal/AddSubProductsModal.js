@@ -1,8 +1,8 @@
 import React from 'react';
-import AddProductForm from '../Form/AddProductForm';
 import { IoMdCloseCircle } from 'react-icons/io';
+import AddSubProductsForm from '../Form/AddSubProductsForm';
 
-const AddProductModal = (props) => {
+const AddSubProductsModal = (props) => {
   if (!props.modalIsOpen) {
     return null;
   }
@@ -15,10 +15,10 @@ const AddProductModal = (props) => {
       <div className="h-auto w-96 rounded-lg bg-black p-4">
         <h2 className="mb-4 text-white">Ajout d'un produits</h2>
 
-        <AddProductForm form={props.form} addDocument={props.addDocument} handleChange={props.handleChange} />
+        <AddSubProductsForm form={props.form} addSubProduct={props.addSubProduct} handleChange={props.handleChange} />
       </div>
     </section>
   );
 };
 
-export default AddProductModal;
+export default AddSubProductsModal;

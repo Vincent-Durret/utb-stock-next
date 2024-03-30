@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import OpenModal from '../ui/Button/OpenModal';
 import AddProductModal from '../Modal/AddProductModal';
 import { db } from '@/firebase';
 import { addDoc, collection } from 'firebase/firestore';
+import ButtonAddProducts from '../ui/Button/ButtonAddProducts';
 
 const SectionAddProduct = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -32,7 +32,7 @@ const SectionAddProduct = () => {
   };
   return (
     <section>
-      <OpenModal openModal={openModal} />
+      <ButtonAddProducts openModal={openModal} />
       <AddProductModal
         addDocument={addDocument}
         handleChange={handleChange}

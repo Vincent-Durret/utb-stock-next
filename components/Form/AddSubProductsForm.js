@@ -1,20 +1,9 @@
 import React from 'react';
 
-const AddProductForm = (props) => {
+const AddSubProductsForm = (props) => {
   return (
     <section>
-      <form onSubmit={props.addDocument} className="flex flex-col">
-        <label htmlFor="category" className="text-white">
-          Catégorie
-        </label>
-        <input
-          type="text"
-          name="category"
-          id="category"
-          className="mb-4 bg-white text-black"
-          value={props.form.category}
-          onChange={props.handleChange}
-        />
+      <form onSubmit={props.addSubProduct} className="flex flex-col">
         <label htmlFor="name" className="text-white">
           Nom
         </label>
@@ -26,15 +15,15 @@ const AddProductForm = (props) => {
           value={props.form.name}
           onChange={props.handleChange}
         />
-        <label htmlFor="image" className="text-white">
-          Image
+        <label htmlFor="value" className="text-white">
+          Quantités
         </label>
         <input
-          type="text"
-          name="image"
-          id="image"
+          type="number"
+          name="quantités"
+          id="value"
           className="mb-4 bg-white text-black"
-          value={props.form.image}
+          value={props.form.value}
           onChange={props.handleChange}
         />
         <label htmlFor="unit" className="text-white">
@@ -56,4 +45,4 @@ const AddProductForm = (props) => {
   );
 };
 
-export default AddProductForm;
+export default AddSubProductsForm;

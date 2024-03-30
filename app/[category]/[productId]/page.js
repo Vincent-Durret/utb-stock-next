@@ -5,7 +5,7 @@ import { collection, getDocs, onSnapshot } from 'firebase/firestore';
 import { db } from '../../../firebase/index';
 import Image from 'next/image';
 import Product from '@/views/product';
-import OpenModal from '@/components/ui/Button/OpenModal';
+import OpenModal from '@/components/ui/Button/ButtonAddProducts';
 
 const ProductPage = ({ params }) => {
   const productId = params.productId; // Utiliser params pour accéder au productId
@@ -42,7 +42,7 @@ const ProductPage = ({ params }) => {
 
   return (
     <main>
-      <Product subProducts={subProducts} />
+      <Product subProducts={subProducts} productId={productId} />
       {subProducts.length === 0 && (
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <p className="bg-red-100 p-4 text-4xl">Aucun produits trouver</p>
